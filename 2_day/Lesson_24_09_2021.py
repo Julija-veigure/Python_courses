@@ -1,4 +1,5 @@
-import datetime# 1. Exercise - Age 100
+import datetime
+# 1. Exercise - Age 100
 #
 # Write a program that asks for and saves a username
 # Ask a question about the user's age, using the username in the question.
@@ -11,12 +12,13 @@ import datetime# 1. Exercise - Age 100
 # currentYear = datetime.datetime.now (). year
 username = input("What is your name?")
 print(f"{username}, you have a nice name!")
-age = input(f"{username}, how old are you?")
-birthday = (100 - int(f"{age}"))
+age = int(input(f"{username}, how old are you?"))
+target_age = 100
+birthday = (target_age - age)
 print(f"{age} years old! Nice! After {birthday} years you will be 100 years old :)")
 currentYear = datetime.datetime.now(). year
-year = int(currentYear + birthday)
-print(f"It will be in {year}")
+year = currentYear + birthday
+print(f"You will be {target_age} in {year} year")
 
 # 2. Exercise - Room volume
 #
