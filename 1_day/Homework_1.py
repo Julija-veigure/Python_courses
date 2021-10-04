@@ -11,3 +11,5 @@ print(365*24*60*60)
 print(10**100)
 # how much will your 1000 Euro investment be worth after 12 years of 6% yearly interest?
 print(1000 + (1000 * 1.06*12))
+print(1_000 * 1.06**12) # rule of 72 or 70 sometimes
+# TODO think about precision we got a lot of extra digits after a comma
