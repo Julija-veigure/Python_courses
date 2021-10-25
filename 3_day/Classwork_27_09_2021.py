@@ -7,8 +7,8 @@ temp = input(f"{username}, what is the outside temperature?")
 not_too_cold = 37
 all_right = 35
 possible_fever = "Possible fever"
-if temp < 35:
-    print("Not too cold")
-    if temp (<= 37 and >= 35):
-        print("All right")
-        else print()
+# if temp < 35:
+#     print("Not too cold")
+# if temp(<= 37 and > = 35):
+#         print("All right")
+# else print()
