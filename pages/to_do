@@ -1,0 +1,12 @@
+whitch Chome driver version? Menu -> Help -> About Google Chrome
+Download driver- https://chromedriver.chromium.org/downloads
+Open new project and paste in project driver file
+E_SHOP - https://www.youtube.com/watch?v=BRxp1Kn1G7w
+
+1. Open url - https://www.neste.lv/lv/content/degvielas-cenas
+2. Accept cookies
+3. get text from 95
+4. get price from 95
+5. get text from DE
+5. get price from DE
+6. export in excel
