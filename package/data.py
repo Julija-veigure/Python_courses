@@ -9,6 +9,14 @@ def virsi_dd():
     virsi_dd = VirsiA().v_dd_price
     return virsi_dd
 
+def cirkle_95():
+    _95 = VirsiA().v_95_price
+    return virsi_95
+
+def cirkle_dd():
+    virsi_dd = VirsiA().v_dd_price
+    return virsi_dd
+
 # def cirkle_95():
 #     cirkle_95 = CirkleK().c_95_price
 #     return cirkle_95
