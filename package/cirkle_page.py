@@ -8,35 +8,23 @@ class CirkleK(BaseFunctions):
     def __init__(self):
         super().__init__("https://www.circlek.lv/degvielas-cenas")
         self.acpt_cookie()
-        self.c_data = self.get_cirkle_produkt_list()
-        self.c_error = self.error()
+        self.c_95_price = self.cirkle_k_get_95_price()
+        self.c_dd_price = self.cirkle_k_get_DD_price()
         self.quit()
 
     def acpt_cookie(self):
         self.click(self.COOKIES)
         print("Cookies_accepted!")
 
-    def get_cirkle_produkt_list(self):
-        all_data = self.get_text(self.V_PROD_LIST).split()
-        if all_data[7] == "95" and all_data[32] == "D":
-            cirkle_95_name = 95
-            cirkle_95_price = float((all_data[8]))
-            cirkle_DD_name = "DD"
-            cirkle_DD_price = float((all_data[33]))
-            print(cirkle_95_name, cirkle_95_price, cirkle_DD_name, cirkle_DD_price, "\n")
-            return cirkle_95_name, cirkle_95_price, cirkle_DD_name, cirkle_DD_price
-        else:
-            None
+    def cirkle_k_get_95_price(self):
+        prices_cirkle = self.get_price(self.V_PROD_LIST, 7, "95", 8)
+        print("DD price is: ", prices_cirkle)
+        return prices_cirkle
 
-
-    def error(self):
-        all_data = self.get_text(self.V_PROD_LIST).split()
-        if all_data[7] != "95" or all_data[32] != "D":
-            cirkle_error = "In Cirkle K page something was changed"
-            print(cirkle_error)
-            return cirkle_error
-        else:
-            None
+    def cirkle_k_get_DD_price(self):
+        prices_cirkle = self.get_price(self.V_PROD_LIST, 32, "DD", 33)
+        print("95 price is: ", prices_cirkle)
+        return prices_cirkle
 
     def quit(self):
         self.driver.quit()

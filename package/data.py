@@ -1,40 +1,27 @@
 from virsi_page import VirsiA
 from cirkle_page import CirkleK
 
+def virsi_95():
+    virsi_95 = VirsiA().v_95_price
+    return virsi_95
 
-def virsi_data():
-    virsi = VirsiA()
-    virsi_fuel_data = virsi.v_data
-    return list(virsi_fuel_data)
+def virsi_dd():
+    virsi_dd = VirsiA().v_dd_price
+    return virsi_dd
 
-
-def virsi_error():
-    virsi = VirsiA()
-    virsi_error = virsi.v_error
-    return virsi_error
-
-
-def cirkle_k_data():
-    cirkle = CirkleK()
-    cirkle_fuel_data = cirkle.c_data
-    return list(cirkle_fuel_data)
-
-
-def cirkle_k_error():
-    cirkle = CirkleK()
-    cirkle_error = cirkle.c_error
-    return cirkle_error
+# def cirkle_95():
+#     cirkle_95 = CirkleK().c_95_price
+#     return cirkle_95
 
 
 def data_export():
-    with open('C:\\Users\\veigujul\\OneDrive - TietoEVRY\\Desktop\\dzeest\\Fuel_prices.csv', 'w') as f:
-        headers = 'Fuel station, 95 price, DD price, ERROR, \n'
+
+    with open('C:\\Users\\veigujul\\OneDrive - TietoEVRY\\Desktop\\dzeest\\Fuel_prices_test.csv', 'w') as f:
+        headers = 'Fuel station, 95 price, DD price\n'
         f.write(headers)
-        f.write(f"Virsi A, {virsi_data()[1]}, {virsi_data()[3]}, {virsi_error()}\n")
-        f.write(f"Cirkle K, {cirkle_k_data()[1]}, {cirkle_k_data()[3]}, {cirkle_k_error()}\n")
+        f.write(f"Virsi A, {virsi_95()}, {virsi_dd()}\n")
+        # f.write(f"Cirkle K, {CirkleK().c_dd_price}\n")
 
 
 if __name__ == "__main__":
-    cirkle_k_data()
-    virsi_data()
     data_export()
