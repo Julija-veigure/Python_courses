@@ -1,4 +1,4 @@
-from base_functions import BaseFunctions
+from final_project_seleniun_fuel_prices.base_functions import BaseFunctions
 
 
 class CirkleK(BaseFunctions):

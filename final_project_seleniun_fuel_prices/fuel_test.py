@@ -1,6 +1,6 @@
 from virsi_page import VirsiA
-from cirkle_page import CirkleK
-from data_export import data_export
+from final_project_seleniun_fuel_prices.cirkle_page import CirkleK
+from final_project_seleniun_fuel_prices.data_export import data_export
 from neste_page import Neste
 
 
