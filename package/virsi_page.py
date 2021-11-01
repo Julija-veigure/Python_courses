@@ -19,12 +19,12 @@ class VirsiA(BaseFunctions):
 
     def virsi_k_get_95_price(self):
         prices_cirkle = self.get_price(self.V_PROD_LIST, 7, "95E", 8)
-        print("DD price is: ", prices_cirkle)
+        print("95 price is: ", prices_cirkle)
         return prices_cirkle
 
     def virsi_k_get_DD_price(self):
         prices_cirkle = self.get_price(self.V_PROD_LIST, 0, "DD", 1)
-        print("95 price is: ", prices_cirkle)
+        print("DD price is: ", prices_cirkle)
         return prices_cirkle
 
     def quit(self):
@@ -32,4 +32,4 @@ class VirsiA(BaseFunctions):
 
 
 if __name__ == "__main__":
-    testVirsi = VirsiA()
+    test_virsi = VirsiA()

@@ -18,12 +18,12 @@ class CirkleK(BaseFunctions):
 
     def cirkle_k_get_95_price(self):
         prices_cirkle = self.get_price(self.V_PROD_LIST, 7, "95", 8)
-        print("DD price is: ", prices_cirkle)
+        print("95 price is: ", prices_cirkle)
         return prices_cirkle
 
     def cirkle_k_get_DD_price(self):
-        prices_cirkle = self.get_price(self.V_PROD_LIST, 32, "D", 33)
-        print("95 price is: ", prices_cirkle)
+        prices_cirkle = self.get_price(self.V_PROD_LIST, 22, "D", 23)
+        print("DD price is: ", prices_cirkle)
         return prices_cirkle
 
     def quit(self):
@@ -31,4 +31,4 @@ class CirkleK(BaseFunctions):
 
 
 if __name__ == "__main__":
-    testCirkle = CirkleK()
+    test_cirkle = CirkleK()

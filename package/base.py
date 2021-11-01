@@ -36,12 +36,13 @@ class BaseFunctions:
     def get_price(self, by_locator, numeration, fluel_name, fluel_price):
         """by_locator, dd_numeration, dd_name, e95_numeration, e95_name, dd_price, e95_price"""
         all_data = self.get_text(by_locator).split()
+        # print(numeration.all_data)
         if all_data[numeration] == fluel_name:
             price = float((all_data[fluel_price]))
             print("Data was read from the page:")
             return price
         else:
-            error = "error"
+            error = "ERROR"
             return error
 
 

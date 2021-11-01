@@ -1,6 +1,6 @@
 from virsi_page import VirsiA
 from cirkle_page import CirkleK
-
+import datetime
 
 def virsi_95():
     virsi_95 = VirsiA().v_95_price
@@ -23,11 +23,11 @@ def cirkle_dd():
 
 
 def data_export():
-    with open('C:\\Users\\veigujul\\OneDrive - TietoEVRY\\Desktop\\dzeest\\Fuel_prices_test.csv', 'w') as f:
-        headers = 'Fuel station, 95 price, DD price\n'
+    with open(f'Fuel_prices_test_{datetime.datetime.now().date()}.csv', 'w') as f:
+        headers = 'Fuel station, 95 price, DD price, Date\n'
         f.write(headers)
-        f.write(f"Virsi A, {virsi_95()}, {virsi_dd()}\n")
-        f.write(f"Cirkle K, {cirkle_95()}, {cirkle_dd()}\n")
+        f.write(f"Virsi A, {virsi_95()}, {virsi_dd()}, {datetime.datetime.now()}\n")
+        f.write(f"Cirkle K, {cirkle_95()}, {cirkle_dd()}, {datetime.datetime.now()}\n")
 
 
 if __name__ == "__main__":
