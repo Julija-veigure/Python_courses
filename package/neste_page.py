@@ -1,21 +1,21 @@
 from base_functions import BaseFunctions
 
 
-class CirkleK(BaseFunctions):
-    COOKIES = ".//a[@id='CybotCookiebotDialogBodyLevelButtonLevelOptinAllowallSelection']"
-    V_PROD_LIST = ".//table[@border='0']"
-    URL = "https://www.circlek.lv/degvielas-cenas"
+class Neste(BaseFunctions):
+    URL = "https://www.neste.lv/lv/content/degvielas-cenas"
+    COOKIES = ".//button[@id='onetrust-accept-btn-handler']"
+    V_PROD_LIST = ".//div[@class='field__item even']"
 
     def __init__(self):
         super().__init__(self.URL)
 
     def acpt_cookie(self):
         self.click(self.COOKIES)
-        print("Cookies_accepted!")
+        print("Cookies is accepted!")
 
     def get_95_price(self):
         try:
-            prices = float(self.get_price(self.V_PROD_LIST, 7, "95", 8))
+            prices = float(self.get_price(self.V_PROD_LIST, 27, "95", 28))
             print("95 price is: ", prices)
             return prices
         except:
@@ -23,7 +23,7 @@ class CirkleK(BaseFunctions):
 
     def get_DD_price(self):
         try:
-            prices = float(self.get_price(self.V_PROD_LIST, 22, "D", 23))
+            prices = float(self.get_price(self.V_PROD_LIST, 53, "D", 54))
             print("DD price is: ", prices)
             return prices
         except:
@@ -31,4 +31,4 @@ class CirkleK(BaseFunctions):
 
 
 if __name__ == "__main__":
-    test_cirkle = CirkleK()
+    test_neste = Neste()
