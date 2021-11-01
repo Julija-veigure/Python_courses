@@ -4,6 +4,7 @@ from base import BaseFunctions
 class VirsiA(BaseFunctions):
     COOKIES = ".//div[@class='actions']/child::a"
     V_PROD_LIST = ".//div[@class='banner-fuel-prices']"
+    URL = "https://www.virsi.lv/lv/degvielas-cena"
 
     def __init__(self):
         super().__init__("https://www.virsi.lv/lv/degvielas-cena")
@@ -22,7 +23,7 @@ class VirsiA(BaseFunctions):
         return prices_cirkle
 
     def virsi_k_get_DD_price(self):
-        prices_cirkle = self.get_price(self.V_PROD_LIST, 0, "D", 1)
+        prices_cirkle = self.get_price(self.V_PROD_LIST, 0, "DD", 1)
         print("95 price is: ", prices_cirkle)
         return prices_cirkle
 

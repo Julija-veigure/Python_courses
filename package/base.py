@@ -12,6 +12,14 @@ class BaseFunctions:
         print(f"Opened page: {url}")
         self.driver.maximize_window()
 
+    # def __init__(self):
+    #     self.driver = webdriver.Chrome()
+    #
+    # def open_page(self,url):
+    #     self.driver.get(url)
+    #     print(f"Opened page: {url}")
+    #     self.driver.maximize_window()
+
     def click(self, by_locator):
         WebDriverWait(self.driver, 10).until(
             EC.presence_of_element_located((By.XPATH, by_locator))).click()

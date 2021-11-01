@@ -22,7 +22,7 @@ class CirkleK(BaseFunctions):
         return prices_cirkle
 
     def cirkle_k_get_DD_price(self):
-        prices_cirkle = self.get_price(self.V_PROD_LIST, 32, "DD", 33)
+        prices_cirkle = self.get_price(self.V_PROD_LIST, 32, "D", 33)
         print("95 price is: ", prices_cirkle)
         return prices_cirkle
 
