@@ -9,7 +9,7 @@ def data_export(virsi95, virsidd, cirkle95, cirkledd, neste95, nestedd):
         f.write(f"Virsi A, {virsi95}, {virsidd}, {datetime.datetime.now()}\n")
         f.write(f"Cirkle K, {cirkle95}, {cirkledd}, {datetime.datetime.now()}\n")
         f.write(f"Neste, {neste95}, {nestedd}, {datetime.datetime.now()}\n")
-        print("Data is exported.\nTest is DONE!")
+        print("Data was exported.\nTest is DONE!")
 
 
 if __name__ == "__main__":

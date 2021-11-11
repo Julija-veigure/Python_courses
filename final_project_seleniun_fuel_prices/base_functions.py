@@ -13,22 +13,23 @@ class BaseFunctions:
         print(f"Page is opened: {url}")
 
     def click(self, by_locator):
-        """Click"""
+        """Click in the object"""
         WebDriverWait(self.driver, 15).until(
             EC.presence_of_element_located((By.XPATH, by_locator))).click()
 
     def get_text(self, by_locator):
-        """Get data/ text from page"""
+        """Get list of data/ text from the page"""
         element = self.driver.find_element(By.XPATH, by_locator).text.split()
         return element
 
-    def get_price(self, by_locator, numeration, fluel_name, fluel_price):
+    def get_price(self, by_locator, fuel_type):
         """Get prices from the page"""
         all_data = self.get_text(by_locator)
-        if all_data[numeration] == fluel_name:
-            price = float((all_data[fluel_price]))
-            print("Data was read from the page:")
-            return price
+        for index, name in enumerate(all_data):
+            if name == fuel_type:
+                price = all_data[index + 1]
+                print("Data was read from the page:")
+                return price
 
     def close_page(self):
         self.driver.quit()
